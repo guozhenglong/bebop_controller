@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  	<!--run the bebop driver node -->
+	<include file="$(find bebop_driver)/launch/bebop_node.launch"/>
+	
+	<!-- Launches the keyboard controller -->
+	<node name="bebop_key_ctrl" pkg="bebop_controller" type="keyboard_controller.py" required="true"/>
+
+	<!--run the mocap optitrack node -->
+	<include file="$(find mocap_optitrack)/launch/single_rigidbody.launch"/>
+	
+</launch>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+	<group ns="bebop1">
+    	  <param name="tf_prefix" value="bebop1" />
+    	  <include file="$(find bebop_driver)/launch/bebop_node.launch">
+      	  <arg name="ip" value="192.168.0.101" />
+    	  </include>
+  	</group>
+
+ <!-- Add second drone -->
+  	<group ns="bebop2">
+    	  <param name="tf_prefix" value="bebop2" />
+    	  <include file="$(find bebop_driver)/launch/bebop_node.launch">
+      	  <arg name="ip" value="192.168.0.102" />
+    	  </include>
+  	</group>
+
+
+ <!-- Launches the visual positioning system driver -->
+	<node name="vps_driver_node" pkg="vps_driver" type="vps_driver_node" required="true"/>
+
+	<!-- Launches the keyboard controller -->
+	<node name="bebop_key_ctrl" pkg="bebop_controller" type="keyboard_controller.py" required="true"/>
+</launch>

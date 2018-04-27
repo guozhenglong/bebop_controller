@@ -1,0 +1,12 @@
+<launch>
+
+	<!--run the bebop driver node -->
+	<!--<include file="$(find bebop_driver)/launch/bebop_node.launch"/>-->
+
+	<!--run the mocap optitrack node -->
+	<!--<include file="$(find mocap_optitrack)/launch/single_rigidbody.launch"/>-->
+
+	<!--run the position control node -->
+    <include file="$(find bebop_pos_ctrl)/launch/bebop_pos_ctrl_mocap.launch"/>
+
+</launch>

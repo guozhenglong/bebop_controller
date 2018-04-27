@@ -1,0 +1,18 @@
+<package>
+	<name>bebop_controller</name>
+	<version>1.0.0</version>
+	<description>
+		Controllers developed for the "Up and flying with the Bebop and ROS" tutorial series
+	</description>
+	<maintainer email="guozhenglong.cn@gmail.com">guozhenglong</maintainer>
+	
+	<buildtool_depend>catkin</buildtool_depend>
+	
+	<build_depend>cmake_modules</build_depend>
+	<run_depend>cmake_modules</run_depend>
+
+	<license>BSD</license>
+	<url>https://github.com/guozhenglong/bebop_keyboard_controller</url>
+</package>
+
+

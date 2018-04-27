@@ -1,0 +1,18 @@
+<launch>
+
+	<!--run the bebop driver node -->
+	<include file="$(find bebop_driver)/launch/bebop_node.launch"/>
+
+	<!--run the aruco detector node -->
+	<include file="$(find aruco_eye_ros)/launch/test_for_bebop.launch"/>
+
+	<!--run the get position node -->
+    <include file="$(find bebop_pos_ctrl)/launch/get_pos_from_aruco.launch"/>
+
+	<!--run the controller node -->
+    <!--<include file="$(find bebop_controller)/launch/control_bebop.launch"/>-->
+
+	<!--run the position control node -->
+    <!--<include file="$(find bebop_pos_ctrl)/launch/bebop_pos_ctrl.launch"/>-->
+
+</launch>
